@@ -5,6 +5,8 @@ Tareita de Desarrollo de Sistemas Móviles, hacer los codelabs 1 Y 2 del Equipo 
 
 ## Resumen
 ### Codelab 01
+Desarrollado en Kotlin Palyground: [Ver codigo](https://pl.kotl.in/w-aqO2hWq?readOnly=true) 
+
 Jetpack Compose es la forma moderna de crear interfaces de usuario (IUs) para las apps de Android.
 Existe un compilador online de Kotlin: [Playground Kotlin](https://developer.android.com/training/kotlinplayground?hl=es-419&_gl=1*ye7gzi*_up*MQ..&gclid=Cj0KCQjwna6_BhCbARIsALId2Z0w3uRHNG2sqhtY5KEHS77iDpmlg1ONC3INGGnnfkNx93W3wqzV1rMaArmbEALw_wcB&gclsrc=aw.ds)
 
