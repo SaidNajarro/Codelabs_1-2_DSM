@@ -1,0 +1,102 @@
+//CODELAB 01
+/*
+Realizado en Kotlin Palyground
+https://pl.kotl.in/w-aqO2hWq?readOnly=true
+*/
+
+fun main() {
+    println("He resuelto los ejercicios provistos de los codelabs, cada uno en una función:\n")
+
+    println("1. Impresión de un mensaje:")
+    println(impresionDeMensaje())
+
+    println("\n2. Corrección de un error de compilación:")
+    println(correcionDeCompilacion())
+
+    println("\n3. Plantillas de String:")
+    println(plantillasDeString(30, "zapatos"))
+
+    println("\n4. Concatenación de Strings:")
+    println(concatenacionDeStrings(2, 3))
+
+    println("\n5. Implementación de matemáticas básicas:")
+    println(implementacionDeMatematicasBasicas(4.0, 2.0))
+
+    println("\n6. Parámetros predeterminados:")
+    println(parametrosPredeterminados())
+    println(parametrosPredeterminados("miemail@gmail.com", "Android"))
+
+    println("\n7. Podómetro:")
+    println(podometro(5000))
+
+    println("\n8. Comparación de dos números:")
+    println(comparacionDeDosNumeros(60, 45))
+
+    println("\n9. Código duplicado (clima por ciudad):")
+    println(codigoDuplicado())
+}
+
+fun impresionDeMensaje(): String {
+    val mensaje: String = """
+Use the val keyword when the value doesn't change.
+Use the var keyword when the value can change.
+When you define a function, you define the parameters 
+that can be passed to it.
+When you call a function, you pass arguments for the parameters.
+"""
+    return mensaje.trimIndent()
+}
+
+fun correcionDeCompilacion(): String {
+    return "New chat message from a friend"
+}
+
+fun plantillasDeString(porcentajeDeDescuento: Int, objeto: String): String {
+    val offer = "Sale - Up to $porcentajeDeDescuento% discount on $objeto! Hurry up!"
+    return offer
+}
+
+fun concatenacionDeStrings(numeroDeAdultos: Int, numeroDeNinios: Int): String {
+    val total = numeroDeAdultos + numeroDeNinios
+    return "The total party size is: $total"
+}
+
+fun implementacionDeMatematicasBasicas(primerNum: Double, segundoNum: Double): String {
+    fun add(a: Double, b: Double): Double {
+        return a + b
+    }
+    return "$primerNum + $segundoNum = ${add(primerNum, segundoNum)}"
+}
+
+fun parametrosPredeterminados(email: String = "use_one@gmail.com", OS: String = "Unknown OS"): String {
+    return "There's a new sign-in request on $OS for your Google Account $email"
+}
+
+fun podometro(pasos: Int): String {
+    fun calcularCaloriasPorPasos(pasos: Int): Double {
+        val caloriasPorPaso = 0.04
+        val totalDeCaloriasQuemadas = pasos * caloriasPorPaso
+        return totalDeCaloriasQuemadas
+    }
+    return "Caminando $pasos pasos, has quemado ${calcularCaloriasPorPasos(pasos)} calorías"
+}
+
+fun comparacionDeDosNumeros(a: Int, b: Int): String {
+    fun usoDelTelefono(minutosAyer: Int, minutosHoy: Int): Boolean {
+        return minutosAyer > minutosHoy
+    }
+    return "$a > $b es ${usoDelTelefono(a, b)}"
+}
+
+fun codigoDuplicado(): String {
+    fun climaCiudad(city: String, lowT: Int, highT: Int, chanceRain: Int): String {
+        return "City: $city\nLow temperature: $lowT, High temperature: $highT\nChance of rain: $chanceRain%"
+    }
+
+    return """
+${climaCiudad("Ankara", 27, 31, 82)}
+${climaCiudad("Tokyo", 32, 36, 10)}
+${climaCiudad("Cape Town", 59, 64, 2)}
+${climaCiudad("Guatemala City", 50, 55, 7)}
+""".trimIndent()
+}
